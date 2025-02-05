@@ -1,0 +1,775 @@
+/* General Styles */
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #0a192f; /* Deep navy blue */
+  }
+  *,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+  
+  h1, h2, h3 {
+    color: #f9d71c; /* Gold */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+  }
+  section {
+    scroll-margin-top: 70px; /* Adjust this value based on your navbar height */
+  }
+
+  /* Center Headings and Paragraphs */
+.projects h2,
+.skills h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects p,
+.skills p,
+.about p,
+.contact p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px; /* Center the paragraph and add space below */
+  color: #ccc; /* Light gray text */
+}
+/*fade in animation*/
+
+
+  /* Navigation Bar */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0a192f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cta-button {
+    background-color: #f9d71c;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  /* Navbar link hover and active states */
+.menu a {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #f9d71c; /* Gold color on hover */
+  }
+  
+  .menu a.active {
+    color: #f9d71c; /* Gold color for active link */
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  /* Hero Section with Background Image */
+.hero {
+    position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-image: url('images/image\ \(1\).png'); /* Add your profile image here */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center top; /* Focus on the top half of the image */
+  background-repeat: no-repeat;
+  overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Overlay to improve text readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 25, 47, 0.7); /* Dark blue overlay with 70% opacity */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem; /* Larger heading */
+    margin-bottom: 20px;
+    color: #f9d71c; /* Gold heading */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc; /* Light gray text */
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+  }
+  
+  /* Button Styles */
+  .hero-buttons .btn-primary {
+    background-color: #00bcd4; /* Teal */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hero-buttons .btn-primary:hover {
+    background-color: #0097a7; /* Darker teal */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  .hero-buttons .btn-secondary {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hero-buttons .btn-secondary:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+ 
+  
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+      background-position: center center; /* Center the image on mobile */
+    }
+  
+    .hero h1 {
+      font-size: 2rem; /* Smaller heading for mobile */
+    }
+  
+    .hero p {
+      font-size: 1rem; /* Smaller text for mobile */
+    }
+  
+    .hero-buttons {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      gap: 15px; /* Space between stacked buttons */
+    }
+  
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+      width: 100%; /* Full width for stacked buttons */
+    }
+  }
+  
+  
+  /* Adjust for larger screens */
+  @media (min-width: 1200px) {
+    .hero {
+      background-position: center 18%; /* Show the top half of the image */
+    }
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 50px 20px;
+    background-color: #1a365f;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #1a365f; /* Dark blue background */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Project Section Buttons */
+.project-buttons .btn-primary {
+    background-color: #00bcd4; /* Teal */
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .project-buttons .btn-primary:hover {
+    background-color: #0097a7; /* Darker teal */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  .project-buttons .btn-secondary {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .project-buttons .btn-secondary:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  /* Project Card Buttons */
+.project-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px;
+  }
+  
+  .project-buttons .btn-primary,
+  .project-buttons .btn-secondary {
+    flex: 1; /* Make buttons take equal width */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for mobile */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Effects for Project Card Buttons */
+  .project-buttons .btn-primary:hover {
+    background-color: #0097a7; /* Darker teal */
+    transform: translateY(-3px);
+  }
+  
+  .project-buttons .btn-secondary:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px);
+  }
+  /*-------modals-------*/
+  /* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+}
+
+.modal-content {
+  background-color: #1a365f; /* Dark blue background */
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  color: #fff;
+  position: relative;
+}
+
+.close {
+  color: #f9d71c; /* Gold close button */
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #e6c200; /* Darker gold on hover */
+}
+  
+  /* Responsive Adjustments for Mobile Screens */
+  @media (max-width: 768px) {
+    .project-buttons {
+      display: flex;
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      gap: 8px; /* Reduce gap between stacked buttons */
+      align-items: center; /* Center align buttons */
+    }
+  
+    .project-buttons .btn-primary,
+    .project-buttons .btn-secondary {
+      width: 100%; /* Full width for stacked buttons */
+    padding: 12px; /* Slightly larger padding for easier tapping */
+    font-size: 14px; /* Consistent font size */
+    margin-bottom: 8px; /* Add margin to avoid overlap */
+    
+    }
+  }
+  .project-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  }
+  
+  /* Skills Section */
+  .skills {
+    padding: 50px 20px;
+    background-color: #0a192f;
+  }
+  
+  .skill-bar {
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #1a365f;
+    height: 10px;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    background-color: #f9d71c;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    background-color: #1a365f;
+  }
+  /* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #f9d71c; /* Gold timeline line */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background-color: #1a365f; /* Dark blue background */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-content h3 {
+    color: #f9d71c; /* Gold heading */
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content p {
+    color: #fff; /* White text */
+    margin: 0;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f9d71c; /* Gold dot */
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(even)::before {
+    left: -10px;
+  }
+  
+  /* Responsive Timeline */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+      left: 0;
+    }
+  
+    .timeline-item::before {
+      left: 10px;
+    }
+  }
+  .timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Contact Section */
+ /* Contact Section Styles */
+.contact {
+    padding: 80px 20px;
+    background-color: #0a192f; /* Deep navy blue */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    color: #f9d71c; /* Gold heading */
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #ccc; /* Light gray text */
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .contact-form {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #1a365f; /* Dark blue border */
+    border-radius: 10px;
+    background-color: #1a365f; /* Dark blue background */
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #f9d71c; /* Gold border on focus */
+    outline: none;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .btn-primary {
+    background-color: #f9d71c; /* Gold button */
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+  }
+  /* Contact Section Buttons */
+.contact-form .btn-primary {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-form .btn-primary:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  .resume-download .btn-secondary {
+    background-color: #1a365f; /* Dark blue */
+    color: #fff;
+    border: 2px solid #f9d71c; /* Gold border */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .resume-download .btn-secondary:hover {
+    background-color: #f9d71c; /* Gold background */
+    color: #000;
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  .contact-info {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .contact-info h3 {
+    color: #f9d71c; /* Gold heading */
+    margin-bottom: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #f9d71c; /* Gold icon */
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #f9d71c; /* Gold text on hover */
+  }
+  
+  .social-link:hover i {
+    color: #e6c200; /* Darker gold icon on hover */
+  }
+  
+  .resume-download {
+    margin-top: 30px;
+  }
+  
+  .btn-secondary {
+    background-color: #1a365f; /* Dark blue button */
+    color: #fff;
+    border: 2px solid #f9d71c; /* Gold border */
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f9d71c; /* Gold background on hover */
+    color: #000;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-info {
+      text-align: center;
+    }
+  
+    .social-links {
+      align-items: center;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a365f;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 16px; /* Add space between icons */
+  }
+  
+  .social-icons a {
+    font-size: 24px; /* Adjust icon size */
+    color: #fff; /* Icon color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .social-icons a:hover {
+    color: #f9d71c; /* Gold color on hover */
+  }
+  
+  
+  .back-to-top {
+    background-color: #f9d71c;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-left {
+      max-width: 100%;
+    }
+  
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Mobile Menu Styles */
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust based on navbar height */
+    right: 20px;
+    background-color: #0a192f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu.active li {
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 769px) {
+    .menu {
+      display: flex !important; /* Ensure menu is always visible on larger screens */
+    }
+  }
+
+  /* Back-to-Top Button */
+.back-to-top {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  /* Navbar CTA Button */
+.navbar .cta-button {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar .cta-button:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+
+  /* Active State for Buttons */
+.btn-primary:active,
+.btn-secondary:active,
+.cta-button:active,
+.back-to-top:active {
+  transform: translateY(0); /* Remove lift effect */
+  background-color: #d4b200; /* Even darker gold */
+}

@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #0a192f; /* Deep navy blue */
+  }
+  
+  h2 {
+    color: #f9d71c; /* Gold heading */
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Header */
+  /* Sticky Header */
+.portfolio-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays above other content */
+    background-color: #1a365f; /* Dark blue */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f9d71c; /* Gold */
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #f9d71c; /* Gold on hover */
+  }
+  
+  .search-bar {
+    margin-top: 20px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 100%;
+  }
+  
+  .search-bar button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: #e6c200; /* Darker gold */
+  }
+  
+  /* Project Grid */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background-color: #1a365f; /* Dark blue */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f9d71c; /* Gold */
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc; /* Light gray */
+  }
+  
+  .tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .tech-stack span {
+    background-color: #0a192f; /* Dark blue */
+    color: #f9d71c; /* Gold */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .project-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .project-buttons .btn-primary,
+  .project-buttons .btn-secondary {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .project-buttons .btn-primary {
+    background-color: #00bcd4; /* Teal */
+    color: #fff;
+  }
+  
+  .project-buttons .btn-primary:hover {
+    background-color: #0097a7; /* Darker teal */
+    transform: translateY(-2px);
+  }
+  
+  .project-buttons .btn-secondary {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+  }
+  
+  .project-buttons .btn-secondary:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  .portfolio-footer {
+    background-color: #1a365f; /* Dark blue */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    color: #f9d71c; /* Gold */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #e6c200; /* Darker gold */
+  }

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM Koto's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Your Logo</div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="cta-button">Hire Me</button>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Bold Tagline Here</h1>
+      <p>Short description about yourself and your expertise.</p>
+      <div class="hero-buttons">
+        <a href="portfolio.html" class="btn-primary">View My Work</a>
+        <button class="btn-secondary">Hire Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Work – Real Results</h2>
+    <p>Here are some of the projects I've worked on, showcasing my skills and expertise.</p>
+    <div class="project-grid">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img src="images/image (1).png" alt="Project 1">
+        <h3>Project Title</h3>
+        <p>Problem-Solution-Impact description.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Node.js</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://your-project.netlify.app" target="_blank" class="btn-primary">Live Demo</a>
+          <button class="btn-secondary" onclick="openModal('case-study-1')">Case Study</button>
+        </div>
+      </div>
+      
+      <!-- Modal for Case Study -->
+      <div id="case-study-1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('case-study-1')">&times;</span>
+          <h2>Case Study: Project Title</h2>
+          <p><strong>Problem:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus dicta nulla quia autem maxime, quam deleniti cupiditate reprehenderit! Earum dignissimos cupiditate est possimus suscipit at aperiam minima accusamus atque corporis.</p>
+          <p><strong>Solution:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quas dolorem pariatur saepe obcaecati libero fugiat iste incidunt aspernatur eveniet. Quaerat unde reprehenderit corrupti, tenetur eos porro molestias sit consequuntur?</p>
+          <p><strong>Impact:</strong> ...</p>
+          <p><strong>Tech Stack:</strong> React, Node.js, MongoDB</p>
+          <p><strong>Challenges:</strong> ...</p>
+          <p><strong>Lessons Learned:</strong> ...</p>
+        </div>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img src="images/image (1).png" alt="Project 1">
+        <h3>Project Title</h3>
+        <p>Problem-Solution-Impact description.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Node.js</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://your-project.netlify.app" target="_blank" class="btn-primary">Live Demo</a>
+          <button class="btn-secondary" onclick="openModal('case-study-1')">Case Study</button>
+        </div>
+      </div>
+      
+      <!-- Modal for Case Study -->
+      <div id="case-study-1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('case-study-1')">&times;</span>
+          <h2>Case Study: Project Title</h2>
+          <p><strong>Problem:</strong> ...</p>
+          <p><strong>Solution:</strong> ...</p>
+          <p><strong>Impact:</strong> ...</p>
+          <p><strong>Tech Stack:</strong> React, Node.js, MongoDB</p>
+          <p><strong>Challenges:</strong> ...</p>
+          <p><strong>Lessons Learned:</strong> ...</p>
+        </div>
+      </div>
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <img src="images/image (1).png" alt="Project 1">
+        <h3>Project Title</h3>
+        <p>Problem-Solution-Impact description.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Node.js</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://your-project.netlify.app" target="_blank" class="btn-primary">Live Demo</a>
+          <button class="btn-secondary" onclick="openModal('case-study-1')">Case Study</button>
+        </div>
+      </div>
+      
+      <!-- Modal for Case Study -->
+      <div id="case-study-1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('case-study-1')">&times;</span>
+          <h2>Case Study: Project Title</h2>
+          <p><strong>Problem:</strong> ...</p>
+          <p><strong>Solution:</strong> ...</p>
+          <p><strong>Impact:</strong> ...</p>
+          <p><strong>Tech Stack:</strong> React, Node.js, MongoDB</p>
+          <p><strong>Challenges:</strong> ...</p>
+          <p><strong>Lessons Learned:</strong> ...</p>
+        </div>
+      </div>
+      <!-- Add more project cards here -->
+      
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills & Tech Stack</h2>
+    <p>These are the tools and technologies I specialize in.</p>
+    <div class="skill-categories">
+      <div class="category">
+        <h3>Web Development</h3>
+        <div class="skill-bar">
+          <span>JavaScript</span>
+          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <!-- Add more skills here -->
+      </div>
+      <div class="category">
+        <h3>Business Analysis</h3>
+        <div class="skill-bar">
+          <span>Power BI</span>
+          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+        <!-- Add more skills here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Engaging bio about yourself and your journey.</p>
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>2023 - Present</h3>
+          <p>Working as a Freelance Web Developer and Business Analyst.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>2020 - 2023</h3>
+          <p>Graduated with a BSc in IT and Business Systems from XYZ University.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>2018 - 2020</h3>
+          <p>Completed internships in web development and business analysis.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>2016 - 2018</h3>
+          <p>Started learning programming and business analysis tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me for collaborations, job opportunities, or just a friendly hello!</p>
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+  
+      <!-- Social Media Links and Resume -->
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/yourprofile" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://twitter.com/yourprofile" target="_blank" class="social-link">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
+        <div class="resume-download">
+          <a href="path/to/your/resume.pdf" download class="btn-secondary">
+            <i class="fas fa-file-pdf"></i>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2025 PM Koto. All rights reserved.</p>
+    <button class="back-to-top">↑</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
