@@ -95,6 +95,10 @@ body {
     display: block; /* Show the hamburger menu icon */
   }
 
+  .menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
   .menu li {
     margin: 10px 0;
   }
@@ -117,6 +121,10 @@ body {
     display: block; /* Show the hamburger menu icon */
   }
 
+  .menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
   .menu li {
     margin: 10px 0;
   }
@@ -125,59 +133,6 @@ body {
     margin-top: 10px;
   }
 }
-
-/* Responsive Design for Tablets */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* Keep items in a row */
-    justify-content: space-between;
-  }
-
-  .menu {
-    flex-direction: row; /* Keep menu items in a row */
-    gap: 10px;
-  }
-
-  .search-bar {
-    flex: 1; /* Allow search bar to take available space */
-    margin-left: 10px;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-
-  .search-bar button {
-    width: auto; /* Keep button width auto */
-  }
-}
-
-/* Responsive Design for Smartphones */
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: row; /* Keep items in a row */
-    justify-content: space-between;
-  }
-
-  .menu {
-    flex-direction: row; /* Keep menu items in a row */
-    gap: 10px;
-  }
-
-  .search-bar {
-    flex: 1; /* Allow search bar to take available space */
-    margin-left: 10px;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-
-  .search-bar button {
-    width: auto; /* Keep button width auto */
-  }
-}
-
 
   /* Project Grid */
   .project-grid {
