@@ -240,7 +240,32 @@ html {
       background-position: center 18%; /* Show the top half of the image */
     }
   }
-  
+  /* Responsive Design for Mobile Screens */
+@media (max-width: 480px) {
+  .hero {
+    background-position: center center; /* Center the image horizontally */
+    background-size: cover; /* Ensure the image covers the entire container */
+    height: 50vh; /* Reduce the height to 50% of the viewport height */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  .hero p {
+    font-size: 0.875rem; /* Smaller text for mobile */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px; /* Space between stacked buttons */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%; /* Full width for stacked buttons */
+  }
+}
   /* Projects Section */
   .projects {
     padding: 50px 20px;

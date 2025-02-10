@@ -1,11 +1,21 @@
 /* General Styles */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-color: #0a192f; /* Deep navy blue */
-  }
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #0a192f; /* Deep navy blue */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
   
   h2 {
     color: #f9d71c; /* Gold heading */
@@ -197,3 +207,78 @@ body {
   .social-icons a:hover {
     color: #e6c200; /* Darker gold */
   }
+
+  /* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .navbar .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px; /* Space between menu items */
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 15px; /* Adjust gap between project cards */
+  }
+
+  .project-card {
+    padding: 15px; /* Adjust padding for project cards */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Smaller heading for tablets */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller text for tablets */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%; /* Full width for buttons */
+  }
+}
+
+/* Responsive Design for Smartphones */
+@media (max-width: 480px) {
+  .navbar .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px; /* Space between menu items */
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column for smartphones */
+    gap: 10px; /* Adjust gap between project cards */
+  }
+
+  .project-card {
+    padding: 10px; /* Adjust padding for project cards */
+  }
+
+  .hero {
+    background-position: center center; /* Center the image horizontally */
+    background-size: cover; /* Ensure the image covers the entire container */
+    height: 50vh; /* Reduce the height to 50% of the viewport height */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Smaller heading for smartphones */
+  }
+  .hero p {
+    font-size: 0.875rem; /* Smaller text for smartphones */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%; /* Full width for buttons */
+  }
+}
