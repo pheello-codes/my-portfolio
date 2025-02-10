@@ -16,7 +16,10 @@ body {
 *::after {
   box-sizing: inherit;
 }
-  
+  /* Center headings */
+.portfolio-section h2 {
+  text-align: center;
+}
   /* Header */
 /* Smooth scrolling */
 html {
