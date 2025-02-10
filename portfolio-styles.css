@@ -17,9 +17,17 @@ body {
   box-sizing: inherit;
 }
   
-
-  
   /* Header */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+//* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* General Styles for Header */
 .portfolio-header {
   background-color: #1a365f; /* Dark blue background */
@@ -53,6 +61,12 @@ body {
   font-size: 1rem;
 }
 
+/* Active link styles */
+.menu li a.active {
+  color: #f9d71c; /* Gold color for active link */
+  font-weight: bold;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -75,12 +89,6 @@ body {
   padding: 5px 10px;
   cursor: pointer;
   font-size: 1rem;
-}
-
-/* Active link styles */
-.menu li a.active {
-  color: #f9d71c; /* Gold color for active link */
-  font-weight: bold;
 }
 
 /* Hamburger Menu Styles */
@@ -335,3 +343,15 @@ body {
     width: 100%; /* Full width for buttons */
   }
 }
+
+  /* Back-to-Top Button */
+  .back-to-top {
+    background-color: #f9d71c; /* Gold */
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
