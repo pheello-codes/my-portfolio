@@ -24,6 +24,9 @@ body {
 .portfolio-header {
   background-color: #1a365f; /* Dark blue background */
   padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the header stays on top of other content */
 }
 
 .navbar {
@@ -72,6 +75,12 @@ body {
   padding: 5px 10px;
   cursor: pointer;
   font-size: 1rem;
+}
+
+/* Active link styles */
+.menu li a.active {
+  color: #f9d71c; /* Gold color for active link */
+  font-weight: bold;
 }
 
 /* Hamburger Menu Styles */
