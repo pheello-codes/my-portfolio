@@ -344,14 +344,59 @@ html {
   }
 }
 
-  /* Back-to-Top Button */
-  .back-to-top {
-    background-color: #f9d71c; /* Gold */
-    color: #000;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+ /* Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f9d71c; /* Gold */
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: none; /* Initially hidden */
+}
+
+.back-to-top:hover {
+  background-color: #e6c200; /* Darker gold */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Redirect to Home Button */
+.redirect-home {
+  position: fixed;
+  bottom: 80px; /* Adjust as needed to avoid overlap with Back to Top button */
+  right: 20px;
+  background-color: #00bcd4; /* Teal */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.redirect-home:hover {
+  background-color: #0097a7; /* Darker teal */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Hide Redirect to Home Button on smaller screens */
+@media (max-width: 768px) {
+  .redirect-home {
+    display: none;
   }
-  
-  .back-to-top:hover {
-    background-color: #e6c200; /* Darker gold */
-    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Hide Go to Home link in navbar on larger screens */
+@media (min-width: 769px) {
+  .menu li a[href="index.html"] {
+    display: none;
   }
+}

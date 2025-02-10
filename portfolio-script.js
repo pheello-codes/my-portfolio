@@ -32,11 +32,11 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
 // Smooth scrolling for navbar links
 document.querySelectorAll('.menu a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent default anchor behavior
     const targetId = this.getAttribute('href').substring(1); // Get the target section ID
     const targetSection = document.getElementById(targetId); // Find the target section
 
     if (targetSection) {
+      e.preventDefault(); // Prevent default anchor behavior
       const headerOffset = document.querySelector('.portfolio-header').offsetHeight;
       const elementPosition = targetSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition - headerOffset;
@@ -83,4 +83,22 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 sections.forEach(section => {
   observer.observe(section);
+});
+
+// Back to Top button functionality
+const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
