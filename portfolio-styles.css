@@ -30,6 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .logo {
@@ -71,18 +72,18 @@ body {
 /* Responsive Design for Tablets */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* Keep items in a row */
+    justify-content: space-between;
   }
 
   .menu {
-    flex-direction: column;
+    flex-direction: row; /* Keep menu items in a row */
     gap: 10px;
   }
 
   .search-bar {
-    width: 100%;
-    margin-top: 10px;
+    flex: 1; /* Allow search bar to take available space */
+    margin-left: 10px;
   }
 
   .search-bar input {
@@ -90,25 +91,25 @@ body {
   }
 
   .search-bar button {
-    width: 100%;
+    width: auto; /* Keep button width auto */
   }
 }
 
 /* Responsive Design for Smartphones */
 @media (max-width: 480px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* Keep items in a row */
+    justify-content: space-between;
   }
 
   .menu {
-    flex-direction: column;
+    flex-direction: row; /* Keep menu items in a row */
     gap: 10px;
   }
 
   .search-bar {
-    width: 100%;
-    margin-top: 10px;
+    flex: 1; /* Allow search bar to take available space */
+    margin-left: 10px;
   }
 
   .search-bar input {
@@ -116,7 +117,7 @@ body {
   }
 
   .search-bar button {
-    width: 100%;
+    width: auto; /* Keep button width auto */
   }
 }
 
