@@ -36,12 +36,15 @@ body {
 .logo {
   font-size: 1.5rem;
   color: #f9d71c; /* Gold */
+  order: 2; /* Move logo to the right */
+  margin-left: auto; /* Push logo to the far right */
 }
 
 .menu {
   display: flex;
   list-style: none;
   gap: 20px;
+  order: 1; /* Move menu to the left */
 }
 
 .menu li a {
@@ -54,11 +57,17 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  order: 3; /* Move search bar to the next line */
 }
 
 .search-bar input {
   padding: 5px;
   font-size: 1rem;
+  width: 100%;
+  max-width: 300px; /* Limit the width of the search input */
 }
 
 .search-bar button {
